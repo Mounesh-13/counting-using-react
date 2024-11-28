@@ -1,38 +1,90 @@
-.App {
+/* General reset */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+  color: #fff;
+}
+
+/* Main container */
+.app {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.counter-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #f8cdda;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.count-display {
+  font-size: 4rem;
+  margin: 20px 0;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Buttons */
+.button-group {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.increment {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  color: #fff;
+}
+
+.increment:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(67, 206, 162, 0.6);
+}
+
+.decrement {
+  background: linear-gradient(135deg, #ff6a6a, #ee0979);
+  color: #fff;
+}
+
+.decrement:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 106, 106, 0.6);
+}
+
+.reset {
+  background: linear-gradient(135deg, #f7b42c, #fc575e);
+  color: #fff;
+}
+
+.reset:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(247, 180, 44, 0.6);
+}
+
+/* Button hover animation */
+.button:active {
+  transform: scale(1);
+  box-shadow: none;
 }
